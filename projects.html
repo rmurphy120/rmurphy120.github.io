@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ryan Murphy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-layout">
+
+        <div id="sidebar"></div>
+
+        <script>
+            fetch('sidebar.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('sidebar').innerHTML = html;
+                });
+        </script>
+
+        <div class="main-content">
+            <div id="site-header"></div>
+
+            <script>
+                fetch('header.html')
+                    .then(res => res.text())
+                    .then(html => {
+                        document.getElementById('site-header').innerHTML = html;
+                    });
+            </script>
+
+            <main class="container">
+                <section class="projects">
+
+                    <article class="project">
+                        <div class="project-image">
+                            <video autoplay muted loop>
+                                <source src="assets/videos/Ricochet.mp4" type="video/mp4">
+                                Ricochet
+                            </video>
+                        </div>
+                        <div class="project-details">
+                            <h2>Ricochet</h2>
+                            <p class="tags">Summer 2024 - Current</p>
+                            <p class="tags">Unity · C# · git</p>
+                            <p>
+                                Helping my brother-in-law develop his game idea - a two player board game with two basic
+                                pieces, shooters and shielders. The goal is to shoot all the opponents shooters or enter
+                                a victory square (The white center square). Big picture, we want to add a few new pieces
+                                and then create a bunch of different scenarios with those raw building blocks to see
+                                what's fun. Currently though, I am working on implementing a genetic algorithm for an
+                                AI. This has given me good practice using git with multiple developers.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="assets/images/AperiodicTilingGenerator.png" alt="AperiodicTilingGenerator">
+                        </div>
+                        <div class="project-details">
+                            <h2>AperiodicTilingGenerator</h2>
+                            <p class="tags">Summer 2024</p>
+                            <p class="tags">Java · JavaFX</p>
+                            <p>
+                                Recursive algorithm to generate a random subsection of the
+                                <a href="https://en.wikipedia.org/wiki/Penrose_tiling" target="_blank">Penrose
+                                    Tiling</a>, a famous aperiodic tiling. Was partly a coding project and partly fun
+                                math excercise to understand the proof of its aperiodic property. It also looks pretty.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="assets/images/ChessAI.png" alt="ChessAI">
+                        </div>
+                        <div class="project-details">
+                            <h2>ChessAI</h2>
+                            <p class="tags">Spring 2024 - Current</p>
+                            <p class="tags">Java · JavaFX</p>
+                            <p>
+                                Making a chess engine so I can train my own AI. The engine currently supports resticting
+                                movement to legal moves only, with moving animation and dynamically highlighted squares
+                                denoting legal moves. I only need to implement pawn promotion and then I can start work
+                                on the AI.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="assets/images/NeuralNetwork.png" alt="NeuralNetwork">
+                        </div>
+                        <div class="project-details">
+                            <h2>NeuralNetwork</h2>
+                            <p class="tags">Summer 2023</p>
+                            <p class="tags">Java</p>
+                            <p>
+                                My attempt at making a neural network from scratch. I didn't look at any code, so I
+                                relied on being fluent in the theory to make a working model. It achieves 80%
+                                accuracy on the MNIST dataset. (I was in high school, so I was just happy it was
+                                learning). It was also great practice at writing modular, flexable code.
+                            </p>
+                        </div>
+                    </article>
+
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

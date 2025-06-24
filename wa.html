@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ryan Murphy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-layout">
+
+        <div id="sidebar"></div>
+
+        <script>
+            fetch('sidebar.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('sidebar').innerHTML = html;
+                });
+        </script>
+
+        <div class="main-content">
+            <div id="site-header"></div>
+
+            <script>
+                fetch('header.html')
+                    .then(res => res.text())
+                    .then(html => {
+                        document.getElementById('site-header').innerHTML = html;
+                    });
+            </script>
+
+            <main class="container">
+
+                <p>
+                    <a href="https://wa.wisc.edu/" target="_blank">Wisconsin Autonomous</a> is a competor in SAE
+                    AutoDrive Challenge II whose goal is to make an autonomous vehicle. I was a part of the perception
+                    team my first two years, now I serve as the president of the student org.
+                </p>
+
+                <section class="projects">
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="assets/images/WAPresident.png" alt="WA Team">
+                        </div>
+                        <div class="project-details">
+                            <h2>President</h2>
+                            <p class="tags">Team/project management</p>
+                            <p>
+                                Elected president of a 50+ member student org, I have taken up the responsibility of
+                                leading our team through the final year of our competition. I have a few focuses this
+                                year. One will be to establish strong leadership, a lack of which our org has
+                                suffered from in the past. I will also spearhead writing static reports scored by our
+                                competition. Finally, I'll organize the club's transition to a new challenge once 
+                                the current one ends.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="assets/images/SignLabeling.png" alt="SignLabeling">
+                        </div>
+                        <div class="project-details">
+                            <h2>Traffic sign labeling environment</h2>
+                            <p class="tags">Python</p>
+                            <p>
+                                Our object detection model currently does not discriminate between traffic signs (e.g.
+                                stop signs and speed limit signs fell under the same class). I wrote a labeling
+                                environment, deployed on a webpage, which iterated though our image data and showed
+                                traffic sign labels to a human to sub-classify. Because of our vast quantity of data,
+                                I designed for speed and parallelized the work so multiple people could label at once.
+                                (The demo to the right is targeting humans in the data just as an example).
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <video autoplay muted loop>
+                                <source src="assets/videos/TRRelivancy.mp4" type="video/mp4">
+                                TR Relivancy
+                            </video>
+                        </div>
+                        <div class="project-details">
+                            <h2>Traffic light state/relivancy classification</h2>
+                            <p class="tags">Python · OpenCV</p>
+                            <p>
+                                My second year, our object detection model reliably identified traffic lights, but we
+                                needed to know which ones were relivant and the state of those lights. So, I wrote a
+                                post classification script using color masking which addressed this problem. 
+                                Particularly, since I used color masking and the competition traffic lights had a 
+                                yellow background, I had to account and adjust for this. (The demo on the left uses 
+                                an off-the-shelf YOLO model, so don't focus on which traffic lights are detected. 
+                                Instead, pay attention to whether the detected lights are irrelevant (red) or relevant 
+                                (green), and the state of the relevant traffic lights).
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="assets/images/ConeDeerClassifier.png" alt="ConeDeerClassifier">
+                        </div>
+                        <div class="project-details">
+                            <h2>Traffic barrel vs Deer classifiier</h2>
+                            <p class="tags">Python · OpenCV · KNN</p>
+                            <p>
+                                My first year, we had an unreliable object detection model. Particularly, we had trouble
+                                classifying deers and traffic cones. I wrote a post classification script which used a
+                                color graph in combination with a KNN to achieve over 90% accuracy while being
+                                computationally light.
+                            </p>
+                        </div>
+                    </article>
+
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

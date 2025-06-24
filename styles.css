@@ -1,3 +1,146 @@
+/* Reset some browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 2rem 1rem;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
 body {
-    background: pink;
+  font-family: "Segoe UI", "Verdana", sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Hero / Header */
+.hero {
+  padding: 3rem 0;
+}
+
+.hero h1 {
+  font-family: "Verdana", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero .subtitle {
+  font-family: monospace;
+  margin-bottom: 1rem;
+}
+
+.icon-row {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  display: flex; 
+  gap: 1rem;
+}
+
+/* Projects */
+.projects {
+  margin: 2rem 0;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+/* Reverse the order on even items for an alternating layout */
+/* .project:nth-child(even) {
+   flex-direction: row-reverse;
+ }*/
+
+.project-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.project-image video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.project-details {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.project-details h2 {
+  margin-bottom: 0.3rem;
+  font-size: 1.8rem;
+}
+
+.project-details .tags {
+  font-family: monospace;
+  color: #777;
+  margin-bottom: 0.8rem;
+}
+
+/* Responsive tweak */
+@media (max-width: 700px) {
+  .project {
+    flex-direction: column;
+  }
+  .project-image,
+  .project-details {
+    max-width: 100%;
+    padding: 0;
+  }
+  .project-details {
+    margin-top: 1rem;
+  }
 }

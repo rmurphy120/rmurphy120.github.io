@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ryan Murphy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-layout">
+
+        <div id="sidebar"></div>
+
+        <script>
+            fetch('sidebar.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('sidebar').innerHTML = html;
+                });
+        </script>
+
+        <div class="main-content">
+            <div id="site-header"></div>
+
+            <script>
+                fetch('header.html')
+                    .then(res => res.text())
+                    .then(html => {
+                        document.getElementById('site-header').innerHTML = html;
+                    });
+            </script>
+
+            <main class="container">
+
+                <p>
+                    This summer, I am conducting a research apprenticeship on deep multi-agent reinforcement learning
+                    algorithms. The goal is to apply these algorithms to partially observable games. This is a class
+                    of games which the agent cannot observe the full state, but only a part of it. It is easy to
+                    imagine the applicability of these scenarios, but the area is thus far understudied. I am
+                    conducting these studies under
+                    <a href="https://pages.cs.wisc.edu/~yw/" target="_blank">Dr. Young Wu</a> and am being funded
+                    through the L&S Honors Program.
+                </p>
+
+                <section class="projects">
+
+                    <article class="project">
+                        <div class="project-image">
+                            <video autoplay muted loop>
+                                <source src="assets/videos/QPlanning.mp4" type="video/mp4">
+                                Fictitious Play
+                            </video>
+                        </div>
+                        <div class="project-details">
+                            <h2>Fictitious Play</h2>
+                            <p class="tags">Java</p>
+                            <p>
+                                Algorithm to solve for an exact Nash equilibrium of a zero-sum markov game. Set up for
+                                any k number of cars in a pursuit-evation game on an m by n board. Has support for
+                                multiple action spaces, including games with and without an action to do nothing.
+                                Because this solves for the exact equilibrium, it is the base to which I will compare
+                                subsequent approximation algorithms to. Credit for visualization:
+                                <a href="https://ghadcock.github.io/298-test/" target="_blank">Glenn Hadcock</a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="assets/images/ProgressBar.png" alt="In Progress">
+                        </div>
+                        <div class="project-details">
+                            <p>
+                                Come back later in the summer for updates!
+                            </p>
+                        </div>
+                    </article>
+
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
