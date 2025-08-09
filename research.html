@@ -35,8 +35,8 @@
             <main class="container">
 
                 <p>
-                    This summer, I am conducting a research apprenticeship on deep multi-agent reinforcement learning
-                    algorithms. The goal is to apply these algorithms to partially observable games. This is a class
+                    This past summer, I conducted a research apprenticeship on multi-agent deep reinforcement learning
+                    (multi-agent DRL) algorithms. The goal is to apply these algorithms to partially observable games. This is a class
                     of games which the agent cannot observe the full state, but only a part of it. It is easy to
                     imagine the applicability of these scenarios, but the area is thus far understudied. I am
                     conducting these studies under
@@ -63,6 +63,25 @@
                                 Because this solves for the exact equilibrium, it is the base to which I will compare
                                 subsequent approximation algorithms to. Credit for visualization:
                                 <a href="https://ghadcock.github.io/298-test/" target="_blank">Glenn Hadcock</a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="assets/images/A2CRPS.png" alt="A2C policy learned over time">
+                        </div>
+                        <div class="project-details">
+                            <h2><a href="https://github.com/rmurphy120/PolicyGradientAlgorithms" target="_blank" class="clean-link">Policy Gradient Algorithms</a></h2>
+                            <p class="tags">Python · PyTorch</p>
+                            <p>
+                                This is a class of DRL algorithms which approximates the Nash equilibrium based on the mulit-agent policy gradient theorem. 
+                                I implemented three of these algorithms: REINFORCE, A2C, and SAC. They're powerful tools when 
+                                there exists a pure equilibrium strategy at all states (So they're great at single agent problems), but they struggle if there 
+                                are states with only mixed equilibrium strategies. This is because these algorithms train best responses and also aren't very stable.
+                                REINFORCE is the original policy gradient algorithms. A2C and SAC tries to address the stability of training. Check out the GitHub repo 
+                                for more details on each algorithm. The graph on the left plots the policy learned by A2C over time while playing rock, paper, scissors. 
+                                It gives a good intuition how these algorithms are driven by best response dynamics and struggle to converge to mixed strategies.
                             </p>
                         </div>
                     </article>
