@@ -36,7 +36,8 @@
 
                 <p>
                     This past summer, I conducted a research apprenticeship on multi-agent deep reinforcement learning
-                    (multi-agent DRL) algorithms. The goal is to apply these algorithms to partially observable games. This is a class
+                    (multi-agent DRL) algorithms. The goal is to apply these algorithms to partially observable games.
+                    This is a class
                     of games which the agent cannot observe the full state, but only a part of it. It is easy to
                     imagine the applicability of these scenarios, but the area is thus far understudied. I am
                     conducting these studies under
@@ -54,7 +55,8 @@
                             </video>
                         </div>
                         <div class="project-details">
-                            <h2><a href="https://github.com/rmurphy120/FictitiousPlay" target="_blank" class="clean-link">Fictitious Play</a></h2>
+                            <h2><a href="https://github.com/rmurphy120/FictitiousPlay" target="_blank"
+                                    class="clean-link">Fictitious Play</a></h2>
                             <p class="tags">Java</p>
                             <p>
                                 Algorithm to solve for an exact Nash equilibrium of a zero-sum markov game. Set up for
@@ -72,27 +74,49 @@
                             <img src="assets/images/A2CRPS.png" alt="A2C policy learned over time">
                         </div>
                         <div class="project-details">
-                            <h2><a href="https://github.com/rmurphy120/PolicyGradientAlgorithms" target="_blank" class="clean-link">Policy Gradient Algorithms</a></h2>
+                            <h2><a href="https://github.com/rmurphy120/PolicyGradientAlgorithms" target="_blank"
+                                    class="clean-link">Policy Gradient Algorithms</a></h2>
                             <p class="tags">Python · PyTorch</p>
                             <p>
-                                This is a class of DRL algorithms which approximates the Nash equilibrium based on the mulit-agent policy gradient theorem. 
-                                I implemented three of these algorithms: REINFORCE, A2C, and SAC. They're powerful tools when 
-                                there exists a pure equilibrium strategy at all states (So they're great at single agent problems), but they struggle if there 
-                                are states with only mixed equilibrium strategies. This is because these algorithms train best responses and also aren't very stable.
-                                REINFORCE is the original policy gradient algorithms. A2C and SAC tries to address the stability of training. Check out the GitHub repo 
-                                for more details on each algorithm. The graph on the left plots the policy learned by A2C over time while playing rock, paper, scissors. 
-                                It gives a good intuition how these algorithms are driven by best response dynamics and struggle to converge to mixed strategies.
+                                This is a class of DRL algorithms which approximates the Nash equilibrium based on the
+                                mulit-agent policy gradient theorem.
+                                I implemented three of these algorithms: REINFORCE, A2C, and SAC. They're powerful tools
+                                when
+                                there exists a pure equilibrium strategy at all states (So they're great at single agent
+                                problems), but they struggle if there
+                                are states with only mixed equilibrium strategies. This is because these algorithms
+                                train best responses and also aren't very stable.
+                                REINFORCE is the original policy gradient algorithms. A2C and SAC tries to address the
+                                stability of training. Check out the GitHub repo
+                                for more details on each algorithm. The graph on the left plots the policy learned by
+                                A2C over time while playing rock, paper, scissors.
+                                It gives a good intuition how these algorithms are driven by best response dynamics and
+                                struggle to converge to mixed equilibria (The mixed
+                                equilibrium of rock, paper, scissors being playing each move with equal probability).
                             </p>
                         </div>
                     </article>
 
                     <article class="project">
                         <div class="project-image">
-                            <img src="assets/images/ProgressBar.png" alt="In Progress">
+                            <img src="assets/images/MvsNMFixedM.png" alt="Markovian vs non-Markovian REINFORCE">
                         </div>
                         <div class="project-details">
+                            <h2><a href="https://github.com/rmurphy120/PolicyGradientAlgorithms" target="_blank"
+                                    class="clean-link">Non-Markovian Policy Gradient Algorithms</a></h2>
+                            <p class="tags">Python · PyTorch</p>
                             <p>
-                                Come back later in the summer for updates!
+                                These algorthims extend the policy gradient algorithms to use non-Markovian policies,
+                                which can be used in partially observable environments.
+                                I implemented the non-Markovian REINFORCE algorithm using an LSTM and compared it to the
+                                orgininal Markovian REINFORCE algorithm. The graph on
+                                the left shows the results of this comparison (see the GitHub repo for more details). To
+                                summarize though, this shows no dip in performance when
+                                using the non-Markovian policy, which gives credance to the use of these algorthims to
+                                solve partially observable games. The reason
+                                we never tested these algorithms in a partially observable game is because there is no
+                                way to benchmark their performance. This is beacuse there aren't
+                                efficient way to solve for the exact Nash equilibrium of a partially observable game.
                             </p>
                         </div>
                     </article>
